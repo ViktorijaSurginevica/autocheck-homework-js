@@ -6,4 +6,11 @@
 */
 
 // your code
-let factorial
+let factorial = 1;
+let count = 1;
+
+while (count < 11) {
+  factorial = factorial * count;
+  count = count + 1;
+}
+console.log(factorial);
