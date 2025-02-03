@@ -15,11 +15,7 @@ const hasTemporaryPass = true
 
 let isAccess
 
-if(isAdmin = true && isVerifiedUser = true && hasSpecialPermission = true || hasTemporaryPass = true ) {
-alert(true);
-}
-else {
-    alert(false);
-}
+const isAccess = (isAdmin = true || isVerifiedUser = true) && (hasSpecialPermission = true || hasTemporaryPass = true ) 
+console.log(`Доступ к ресурсу: ${isAccess}`);  
 
 // your code
