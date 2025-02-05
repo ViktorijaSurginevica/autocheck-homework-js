@@ -8,12 +8,11 @@
 */
 
 // тестовые данные (значения можно менять)
-const isAdmin = true
-const isVerifiedUser = true
-const hasSpecialPermission = true
-const hasTemporaryPass = true
+let isAccess;
 
-const isAccess = (isAdmin = true || isVerifiedUser = true) && (hasSpecialPermission = true || hasTemporaryPass = true ) 
-console.log(`Доступ к ресурсу: ${isAccess}`);  
+isAccess =
+  (isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass);
+
+console.log("Доступ получен:", isAccess);
 
 // your code
