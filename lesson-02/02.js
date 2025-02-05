@@ -21,6 +21,13 @@ if (isWinningDouble) {
 }
 */
 
+const executeScript = new Function(
+  `${this.studentCode} \n  return {dice1, dice2};`
+);
+const result = executeScript(); // Проверяем, что значения находятся в пределах от 1 до 6
+(0, local_cypress_1.expect)(result.dice1).to.be.oneOf([1, 2, 3, 4, 5, 6]);
+(0, local_cypress_1.expect)(result.dice2).to.be.oneOf([1, 2, 3, 4, 5, 6]);
+
 let dice1 = Math.floor(Math.random() * 6) + 1; // Генерация числа от 1 до 6
 let dice2 = Math.floor(Math.random() * 6) + 1; // Генерация числа от 1 до 6
 let isWinningDouble = dice1 === dice2 && dice1 > 3; // Проверка на выигрышный дубль
