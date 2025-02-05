@@ -21,8 +21,8 @@ if (isWinningDouble) {
 }
 */
 
-let dice1 = Math.floor(Math.random() * 6); // Первый бросок
-let dice2 = Math.floor(Math.random() * 6); // Второй бросок
+let dice1 = Math.floor(Math.random() * 6) + 1; // Генерация числа от 1 до 6
+let dice2 = Math.floor(Math.random() * 6) + 1; // Генерация числа от 1 до 6
 let isWinningDouble = dice1 === dice2 && dice1 > 3; // Проверка на выигрышный дубль
 
 console.log("Первый бросок: " + dice1);
