@@ -3,4 +3,4 @@
 function calculateAverage(num1, num2) {  
     // Вычисляем среднее арифметическое  
     return (num1 + num2) / 2;  
-}  
+}  result = prompt(title, [default]);
