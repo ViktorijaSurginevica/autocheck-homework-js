@@ -2,6 +2,6 @@
 // Функция должна возвращать true, если число чётное, и false — в противном случае
 
 
-function isEven(num) {  
-    return num % 2 === 0;  
+function isEven(number) {  
+    return number % 2 === 0;  
 }
