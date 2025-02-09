@@ -2,5 +2,10 @@
 // Функция должна возвращать true, если число чётное, и false — в противном случае
 
 function isEven(num) {  
+    // Проверка на число  
+    if (typeof num !== 'number') {  
+        throw new Error('Аргумент должен быть числом');  
+    }  
+    
     return num % 2 === 0;  
-}  
+} 
