@@ -19,5 +19,5 @@ function includesElement(array, element) {
             return true; // элемент найден  
         }  
     }  
-   
+    return false; // элемент отсутствует  
 }  
