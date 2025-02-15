@@ -19,11 +19,11 @@ function findUniqueElements(array) {
   const uniqueElements = [];
 
   for (let i = 0; i < array.length; i++) {
-    // Проверяем, существует ли элемент уже в уникальных элементах
+   
     if (!includesElement(uniqueElements, array[i])) {
-      uniqueElements.push(array[i]); // Если нет, добавляем его
+      uniqueElements.push(array[i]); 
     }
   }
 
-  return uniqueElements; // Возвращаем массив уникальных элементов
+  return uniqueElements;
 }
