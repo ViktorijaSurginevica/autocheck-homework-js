@@ -17,6 +17,6 @@ function doubleEachCharacter(str) {
     for (let char of str) { // Проходим по каждому символу входной строки  
         doubledString += char.repeat(2); // Удваиваем символ и добавляем к результату  
     }  
-  
+    return doubledString; // Возвращаем новую строку  
 }  
 
