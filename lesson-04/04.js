@@ -13,10 +13,10 @@
 */
 
 function doubleEachCharacter(str) {  
-    let doubledString = ''; 
-    for (let char of str) {
-        doubledString += char.repeat(2);
+    let doubledString = ''; // Создаем пустую строку для хранения результата  
+    for (let char of str) { // Перебираем каждый символ в строке str  
+        doubledString += char.repeat(2); // Удваиваем текущий символ и добавляем его к результату  
     }  
-    return doubledString; 
-}  
+    return doubledString; // Возвращаем строку с удвоенными символами  
+}
 
