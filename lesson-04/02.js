@@ -20,7 +20,7 @@ function findUniqueElements(array) {
 
   for (let i = 0; i < array.length; i++) {
    
-    if (!includesElement(uniqueElements, array[i])) {
+    if (!includesElement(uniqueElements, array[i]))  // Если элемент не находится в массиве уникальных элементов  {
       uniqueElements.push(array[i]); 
     }
   }
