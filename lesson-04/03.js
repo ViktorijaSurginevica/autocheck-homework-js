@@ -17,6 +17,11 @@ findCommonElements([1, 2, 3], [2, 3, 4]) // [2, 3]
 Подсказка: можно использовать функцию `includesElement`, которую мы написали ранее. Переписывать её не нужно, она доступна по всему проекту за счёт hoisting.
 */
 
-function findCommonElements(array1, array2) {  
-    return array1.filter(element => includesElement(array2, element));  
+function findCommonElements(array1, array2) {
+  return array1.filter((element) => includesElement(array2, element));
 }
+
+// Примеры использования:
+console.log(findCommonElements([1, 2, 3], [2, 3, 4])); // [2, 3]
+console.log(findCommonElements(["a", "b", "c"], ["b", "d"])); // ['b']
+console.log(findCommonElements([1, 2, 3], [4, 5, 6])); // []
