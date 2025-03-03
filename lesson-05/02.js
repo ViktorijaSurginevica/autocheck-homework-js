@@ -35,6 +35,8 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery(object, gallery(key), gallery(values)) {
-
-}
+function updateGallery(gallery, artwork, newValue) {  
+  // Обновляем значение, если произведение уже есть в галерее,  
+  // или добавляем новое произведение в галерею.  
+  gallery[artwork] = newValue;  
+}  
