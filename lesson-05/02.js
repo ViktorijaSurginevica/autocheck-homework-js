@@ -30,13 +30,11 @@ console.log(gallery)
 */
 
 const gallery = {
-  'Mona Lisa': 'Leonardo da Vinci',
-  'Starry Night': 'Vincent van Gogh',
-  'The Scream': 'Edvard Munch',
-}
+  "Mona Lisa": "Leonardo da Vinci",
+  "Starry Night": "Vincent van Gogh",
+  "The Scream": "Edvard Munch",
+};
 
-function updateGallery(gallery, artwork, newValue) {  
-  // Обновляем значение, если произведение уже есть в галерее,  
-  // или добавляем новое произведение в галерею.  
-  gallery[artwork] = newValue;  
-}  
+function updateGallery(gallery, artwork, newValue) {
+  gallery[artwork] = newValue;
+}
