@@ -4,8 +4,9 @@
  */
 
 function isNumeric(str) {
-  if (typeof str === number) {
-    return true;
+  if (typeof str === 'string' && str.trim() !== '') {  
+    
+    return !isNaN(parseFloat(str)) && isFinite(str);  
   } else {
     return false;
   }
