@@ -18,31 +18,22 @@ const WEB_TECH_IMAGES = [
   "https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/784380b9-6937-42a6-bdfe-869835820234_html-magic-logo.jpg",
 ];
 
-// Получаем ссылки на элементы кнопок и изображение
-const prevButton = document.getElementById("prev");
-const nextButton = document.getElementById("next");
-const imageElement = document.getElementById("web-tech-image");
+let currentIndex = 0;  
+const imageElement = document.getElementById('web-tech-image');  
 
-// Инициализируем индекс текущего изображения
-let currentIndex = 0;
+function updateImage() {  
+  imageElement.src = WEB_TECH_IMAGES[currentIndex];  
+}  
 
-// Функция для обновления отображаемого изображения
-function updateImage() {
-  imageElement.src = WEB_TECH_IMAGES[currentIndex];
-}
+document.getElementById('prev').addEventListener('click', () => {  
+  currentIndex = (currentIndex - 1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length;  
+  updateImage();  
+});  
 
-// Обработчик события для кнопки "prev"
-prevButton.addEventListener("click", () => {
-  currentIndex =
-    (currentIndex - 1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length;
-  updateImage();
-});
+document.getElementById('next').addEventListener('click', () => {  
+  currentIndex = (currentIndex + 1) % WEB_TECH_IMAGES.length;  
+  updateImage();  
+});  
 
-// Обработчик события для кнопки "next"
-nextButton.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % WEB_TECH_IMAGES.length;
-  updateImage();
-});
-
-// Инициализация изображения при загрузке
-updateImage();
+// Инициализация изображения  
+updateImage();  
