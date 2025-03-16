@@ -24,13 +24,17 @@ function updateImage() {
   imageElement.src = WEB_TECH_IMAGES[currentIndex];  
 }  
 
-function changeImage(direction) {  
-  currentIndex = (currentIndex + direction + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length;  
+function handlePrevClick() {  
+  currentIndex = (currentIndex - 1 + WEB_TECH_IMAGES.length) % WEB_TECH_IMAGES.length;  
   updateImage();  
 }  
 
-document.getElementById('prev').addEventListener('click', () => changeImage(-1));  
-document.getElementById('next').addEventListener('click', () => changeImage(1));  
+function handleNextClick() {  
+  currentIndex = (currentIndex + 1) % WEB_TECH_IMAGES.length;  
+  updateImage();  
+}  
 
-// Инициализация изображения  
+document.getElementById('prev').addEventListener('click', handlePrevClick);  
+document.getElementById('next').addEventListener('click', handleNextClick);  
+
 updateImage();  
