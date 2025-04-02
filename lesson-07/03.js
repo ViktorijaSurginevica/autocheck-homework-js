@@ -9,10 +9,12 @@
 * truncate("Короткая строка", 20) // Ожидаемый результат: "Короткая строка"
 */
 
-function truncate(str, maxLength) {
-  // Проверяем, если максимальная длина меньше или равна 3, возвращаем сокращенную строку с многоточием
-  if (maxLength <= 3) return str.slice(0, maxLength) + "...";
+function truncate(str, maxLength) {  
+  // Проверка на то, что максимальная длина должна быть больше 3  
+  if (maxLength <= 3) return str.slice(0, maxLength) + "...";  
 
-  // Обрезаем строку до maxLength - 3 для добавления многоточия
-  return str.length > maxLength ? str.slice(0, maxLength - 3) + "..." : str;
-}
+  // Если длина строки превышает maxLength, обрезаем и добавляем многоточие  
+  return str.length > maxLength  
+    ? str.slice(0, maxLength - 3) + "..."  
+    : str;  
+}  
