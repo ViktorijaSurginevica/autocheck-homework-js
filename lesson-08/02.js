@@ -58,4 +58,4 @@ cancelButton.addEventListener('click', () => {
     countdownDisplay.textContent = 'Отменено' // Сообщение об отмене  
     isTimerStarted = false // Сбрасываем флаг  
   }  
-})  s
+})  
