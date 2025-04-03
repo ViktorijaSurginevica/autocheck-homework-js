@@ -31,4 +31,5 @@ function filter(array, callback) {
           result.push(array[i]); // Добавляем элемент в новый массив  
       }  
   }  
-  return result;
+  return result; // Возвращаем отфильтрованный массив  
+}  
